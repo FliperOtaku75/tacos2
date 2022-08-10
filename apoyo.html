@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>La Canastera</title>
+    <link rel="icon" href="css/media/logo.ico">
+    <link rel="stylesheet" href="css/fonts/fonts.css">
+    <link rel="stylesheet" href="css/formulary.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+
+
+<body id="cuerpoformularios">
+        
+    <nav class="barra">
+        <h2>MENU</h2><img class="menuicon" src="css/media/menuicon.png" alt="menuicon">
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="menu.html">MENÚ</a></li>
+            </li>
+        </ul>
+    </nav>
+<br><br><br><br>
+
+    <section class="formularios">
+            <h2>Calcula cuantos tacos necesitas</h2>
+            <br>
+
+            <div class="formulario__grupo">
+				<label class="formulario__label">Cuantos adultos (5 tacos por persona):</label>
+					<input type="number" class="formulario__input" required name="valor1" id="valor1" placeholder="Numero de adultos">
+			</div>
+
+            <br>
+
+            <div class="formulario__grupo">
+				<label class="formulario__label">Cuantos niños (4 tacos por persona):</label>
+					<input type="number" class="formulario__input" required name="valor2" id="valor2" placeholder="Numero de niños">
+				</div>
+			</div>
+
+            <br>
+                <input class="formulario__btn" type="button" value="Calcular" onclick="calcular()">
+            <br>
+            <br>
+                <laber>Cantidad de tacos por adultos:<span id="el_resultado1"></span></label>
+                    <br>
+                <laber>Cantidad de tacos por niños:<span id="el_resultado2"></span></label>
+                    <br>
+                <laber>Cantidad de tacos en total:<span id="el_resultado"></span></label>
+                    <br>
+            <br>
+                <a href="pedidospersona.php">
+                <input class="formulario__btn" type="button" value="Ir a realizar pedido">
+                </a>    
+            <br>
+        </section>
+
+
+<footer id="footer">
+        <div class="contenedorfooter">
+                        <div class="filas">
+                            <div class="footercol">
+                                <h4>Correos</h4>
+                                <ul>
+                                    <li><a href="#">Inserte link de correo</a></li>
+                                    <li><a href="#">Inserte link de correo</a></li>
+                                </ul>
+                            </div>
+                            <div class="footercol">
+                                <h4>Informacion de Desarrolladores</h4>
+                                <ul>
+                                    <li><a href="#">Inserte link</a></li>
+                                    <li><a href="#">Inserte link</a></li>
+                                </ul>
+                            </div>
+                            <div class="footercol">
+                                <h4>Redes Sociales</h4>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                         </div>
+            </div>
+</footer>
+
+<script>   
+    function calcular(){
+        const num4 = 5;
+        const num5 = 4;
+        var num1 = parseInt(document.getElementById('valor1').value);
+        var num2 = parseInt(document.getElementById('valor2').value);
+        var suma = (num1 * num4) + (num2 * num5);
+        var suma1 = num1 * num4;
+        var suma2 = num2 * num5;
+        // alert('suma es: ' + suma);
+        document.getElementById('el_resultado').innerHTML = suma;
+        document.getElementById('el_resultado1').innerHTML = suma1;
+        document.getElementById('el_resultado2').innerHTML = suma2;
+    }
+
+</script>
+
+
+</body>
+</html>
